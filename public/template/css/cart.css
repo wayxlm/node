@@ -1,0 +1,52 @@
+.margin{width:1200px;margin:0 auto;}
+
+#header{height: 30px;background: #444;}
+#header .top{height: 30px; line-height: 30px; font-size: 12px;}
+#header .top .top-l{float: left;}
+#header .top .top-l a{color:#aaa;}
+#header .top .top-l li{ float: left; padding-right:25px;font-size:14px; font-weight:bold;}
+#header .top .top-l li a:hover{color:#fff}
+
+#header .top .top-c{float: right;display: inline;}
+#header .top .top-c li{float: left;}
+#header .top .top-c li span{ margin: 0px 10px;}
+#header .top .top-c li a{color: #aaa;}
+#header .top .top-c li a:hover{color:#fff;}
+
+#header .top .top-r{float:right;}
+#header .top .top-r li{float:left;}
+#header .top .top-r li span{margin: 0px 10px;}
+#header .top .top-r li b{width:10px;height:5px;background:url(../img/jt.png) no-repeat -2px -55px;
+display: inline-block;margin-left: 10px;}
+#header .top .top-r li a{color: #aaa;}
+
+#layout{margin-top: 18px; overflow: hidden;}
+#layout .logo{float: left;}
+#layout .ipt{float: left; margin:18px 0 0 86px;line-height: 36px;}
+#layout .ipt .s1{float: left;width: 87px;height:34px;border:2px solid #359aff;
+border-right:none; background: url(../img/xj.png) no-repeat 68px 14px;text-align: center;}
+#layout .ipt .s1 a{color: #222; font-size: 14px;}
+#layout .ipt input{width:451px;height:34px;border:2px solid #359aff;border-right:none;
+float: left;}
+#layout .ipt .s2{float: left;width: 93px;height:38px; background: #359aff;}
+#layout .ipt .s2 a{color: #fff;font-size: 14px;font-weight:700;}
+#layout .ipt .s2 img{margin:-5px 9px 0 11px;}
+#layout .cart{width: 120px;height: 34px;border: 1px solid #dfdfdf;float: right;
+margin-top: 18px;border-radius: 5px; background: #f2f2f2; display:inline-block;
+position: relative;cursor: pointer;}
+#layout .cart img{margin: -2px 0 0 10px;}
+#layout .cart span{font-size: 14px; color:#888888;line-height: 34px;}
+#layout .cart .zero{display:inline-block;height:22px;width:22px;
+line-height:22px;font-size: 12px;background: #ff5a6d;text-align:
+center;color: #fff;border-radius:50%; position: absolute;top:-10px;}
+
+
+#bank{margin-top: 65px;}
+#bank .line{height:25px; text-align: center;font-size:22px; font-weight: 700;}
+#bank .line b{width:54px;height: 3px; background: #d8d8d8; display: inline-block; top: -7px; position: relative}
+#bank .bank-t{height:492px; margin-top: 30px;}
+#bank .bank-t ul{}
+#bank .bank-t ul li{ float: left; width: 300px; height: 492px; position: relative }
+#bank .bank-t ul li a.a-hover{display: none;}
+#bank .bank-t ul li a{display:block;position: absolute;top: 0;left: 0;}
+#bank .bank-t ul li:hover a.a-hover{display: block;}

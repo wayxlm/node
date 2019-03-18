@@ -1,0 +1,48 @@
+.margin{width:1200px;margin:0 auto;}
+
+#header{height: 91px;position: relative;}
+#header .logo{margin-top: 18px; float: left;}
+#header .res{padding-left:5px; width:130px; height:24px; 
+line-height:20px; font-size:22px; color:#666; float:left; margin-left:10px; 
+margin-top:60px; border-left:2px solid #666; font-weight: 700;}
+#header i{height: 2px; background: #0080ea;position:absolute;top:110px;width: 100%;left: 0;}
+
+#zc{width: 1085px; height:390px;border: 1px solid #e0e0e0;background: #fff;
+ margin:20px auto;border-top: none; position: relative;}
+#zc form{position: relative;}
+#zc form input{display: inline-block; height: 33px;width: 260px;border: 
+1px solid #cdcdcd;margin-bottom: 20px;}
+#zc form input.i1{margin-top: 60px;}
+#zc form span{font-size:13px;color:#d8b299;margin-left:240px;}
+#zc form p{border:1px solid #ffbdbd; color: #ff0000;width:200px;height: 30px; 
+line-height: 30px;position: absolute;font-size: 12px; text-indent: 15px;}
+#zc form p.p1{width:320px;left:280px;top:60px;}
+#zc form p.p2{width:320px;left:280px;top:115px;}
+#zc a.aa{position:absolute; font-size:20px; left:700px;}
+#zc .msg{font-size: 20px;color:red;}
+
+#zc p{margin-left:330px; font-size: 13px;}
+#zc p a{color: #005aa0;}
+#zc .i5{width: 290px;height: 50px; background: #0042ff; line-height: 50px; text-align:
+ center;border: none; margin-left: 320px; margin-top: 25px; cursor: pointer;}
+
+
+#footer{height:184px;border-top:2px solid #359aff;background:#21232f;margin-top: 85px;}
+#footer .f-t{overflow: hidden;}
+#footer .f-t dl{display: inline-block; margin-top: 25px; 
+width: 166px;height: 140px;border-right:1px solid #555555;}
+#footer .f-t dl.f1{width: 208px;}
+#footer .f-t dl.f2{margin-left: 32px;}
+#footer .f-t dl.f3{text-align: center;}
+#footer .f-t dl dt{font-size: 14px;color: #fff; margin-bottom:19px; }
+#footer .f-t dl dd{font: 14px/24px ""; cursor: pointer;color: #aaaaaa;}
+#footer .f-t dl.f4{width: 359px; margin-left: 47px; border-right: none;}
+#footer .f-t dl.f4 dd{font: 14px/30px "";}
+#footer .f-t dl.f4 dt{font-size: 22px;font-weight: 700;}
+#footer .f-b{height:199px;overflow: hidden;}
+#footer .f-b .links{margin-top:40px; text-align: center;}
+#footer .f-b .links a{color: #545454;margin: 0px 15px;font-size: 14px;}
+#footer .f-b .links a:hover{color:#ff4400; text-decoration: underline;}
+#footer .f-b .pp{text-align: center;margin-top: 10px;}
+#footer .f-b .pp p{color: #666; font:12px/25px "";}
+#footer .gg{text-align: center; margin-top: 8px;}

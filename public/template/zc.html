@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/zc.css" />
+		<link rel="stylesheet" href="css/public.css" />
+	</head>
+	<body>
+		<div id="header">
+			<div class="margin">
+				<div class="logo">
+					<a href="<a href="http://e.esgcc.com.cn">
+			        <img src="http://static.esgcc.com.cn/static/images/logo/logo_qg.jpg">
+			    	</a>
+				</div>	
+				<div class="res">欢迎登录</div>
+			</div>
+			<i></i>
+		</div>
+		
+		<div id="zc">
+			<div class="margin">
+				<form>
+					<p class="p1">可由11位手机号注册</p>
+					<p class="p1 p11" style="display: none;">用户名不符合规则</p>
+					<span> * 账户名字 : </span><input type="text" class="i1"/><br />
+					
+					<p class="p2">8-22位字符必须有字母数字</p>
+					<p class="p2 p22" style="display: none;">请设置密码</p>
+					<span> * 设置密码 : </span><input type="password" class="i2"/><br />
+					
+					
+					
+					
+				</form>
+				<p>
+					<img src="img/true.png">
+					我已阅读并同意<a href="#">《商城注册协议》</a>
+				</p>
+				<a href="logon.html" class="aa">去登录</a>
+				<input type="button" value="立即注册" class="i5" />
+				<span class="msg"></span>
+			</div>		
+		</div>		
+		
+		<div id="footer">
+			<div class="margin">
+		<div class="f-t">
+			<dl class="f1 f2">
+				<dt>采购指南</dt>
+				<dd>平台服务分类介绍</dd>
+				<dd>注册登录规则</dd>
+				<dd>采购循环流程</dd>
+				<dd>支付一点通</dd>
+			</dl>
+			<dl class="f3">
+				<dt>采购指南</dt>
+				<dd>平台服务分类介绍</dd>
+				<dd>注册登录规则</dd>
+				<dd>采购循环流程</dd>
+				<dd>支付一点通</dd>
+			</dl>
+			<dl class="f3">
+				<dt>采购指南</dt>
+				<dd>平台服务分类介绍</dd>
+				<dd>注册登录规则</dd>
+				<dd>采购循环流程</dd>
+				<dd>支付一点通</dd>
+			</dl>
+			<dl class="f3">
+				<dt>采购指南</dt>
+				<dd>平台服务分类介绍</dd>
+				<dd>注册登录规则</dd>
+				<dd>采购循环流程</dd>
+				<dd>支付一点通</dd>
+			</dl>
+			<dl class="f4">
+				<dt>服务热线：(010) 95598-1-8</dt>				
+				<dd>周一至周日 8：00 - 22：00</dd>
+				<dd>国网商城客服邮件：esgcc@sgcc.com.cn</dd>
+				<dd><img src="img/kf.png" /></dd>
+			</dl>
+		</div>	
+		<div class="f-b">
+			<div class="links">
+				<a href="http://static.esgcc.com.cn/help_center/helpcenter_personalMall.html?rurl=http://e.esgcc.com.cn" target="_blank">商店规则</a>
+				<span>|</span>
+				<a href="http://static.esgcc.com.cn/help_center/helpcenter_aboutUs.html?rurl=http://e.esgcc.com.cn" target="_blank">关于我们</a>
+				<span>|</span>
+				<a href="http://static.esgcc.com.cn/help_center/helpcenter_contactUs.html?rurl=http://e.esgcc.com.cn" target="_blank">联系我们</a>
+				<span>|</span>
+				<a href="http://static.esgcc.com.cn/help_center/helpcenter_advert.html?rurl=http://e.esgcc.com.cn" target="_blank">广告服务</a>
+				<span>|</span>
+				<a href="http://www.95598.cn/person/index.shtml" target="_blank">友情链接</a>
+			</div>
+			<div class="pp">
+				<p> 
+					国网商城网站备案号：京ICP备09055871号-3&nbsp;&nbsp;国网商城ICP证号：京ICP证150144号 
+            	</p>
+				<p>
+					商城公网安备号：京公网安备110102001007-3 
+				</p>				
+			</div>
+			<div class="gg">
+				<img src="http://static.esgcc.com.cn/static/images/logo/ca_logo_qg.jpg">
+			</div>
+		</div>
+	</div>
+		</div>
+	</body>
+	<script src="libs/jquery.js"></script>
+	<script type="text/javascript">
+		var i1 = document.querySelector(".i1")		
+		var i2 = document.querySelector(".i2")
+		
+		var i5 = document.querySelector(".i5")
+		var p1 = document.querySelector(".p1")
+		var p11 = document.querySelector(".p11")
+		var p2 = document.querySelector(".p2")
+		var p22 = document.querySelector(".p22")
+		
+		var uonOff = ponOff = p2onOff = eonOff = false;
+		i1.onblur = function(){			
+		 	var reg = /^[1][3,4,5,7,8][0-9]{9}$/;		 	
+        if(reg.test(this.value)){
+        	
+            this.nextElementSibling.innerHTML = "符合规则";
+            uonOff = true;
+        }else{
+            p1.style.display = "none";
+            p11.style.display = "block"
+        }			
+			}
+		i1.onfocus = function(){
+			 p1.style.display = "block";
+			 p11.style.display = "none"
+		}
+		
+		i2.onblur = function(){
+			var reg = /^[0-9A-Za-z]{8,22}$/ ;
+			 if(reg.test(this.value)){
+            this.nextElementSibling.innerHTML = "符合规则";
+            uonOff = true;
+        }else{
+            p2.style.display = "none";
+            p22.style.display = "block"
+        }					
+		}
+		
+		i2.onfocus = function(){
+			p2.style.display = "block";
+            p22.style.display = "none"
+		}
+		
+		class Register{
+        constructor(){
+            this.url = "http://www.liyangyf.com/ctrl/register.php";
+            this.init();
+        }
+        init(){
+            var that = this;
+            $(".i5").click(function(){
+                that.load()
+            })
+        }
+        load(){
+            $.ajax({
+				url:'/api/reg',
+				type:'post',
+                data:{
+                    tel:$(".i1").val(),
+                    pass:$(".i2").val()
+                },
+                success:function(res){
+                    switch(res.error){
+                        case 1:
+                            $(".msg").html("重名");
+                            break;
+                        case 0:
+                            $(".msg").html("成功，3秒周跳转到登录");
+                            setTimeout(() => {
+                                location.href = "logon.html";
+                            }, 3000);
+                            break;
+                        case 2:
+                            $(".msg").html("不允许为空");
+                            break;                            
+					}
+					console.log(res)
+                }
+            })
+        }
+    }
+
+    new Register()
+		
+	</script>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/page.css" />
+    <link rel="stylesheet" href="css/public.css" />
+</head>
+<body>
+    <div id="header">
+        <div class="margin">
+            <div class="top">
+                <ul class="top-l">
+                    <li><a href="http://www.esgcc.com.cn/">国网商城</a></li>
+                    <li><a href="http://emall.esgcc.com.cn/portal/" >企业商城</a></li>
+                    <li><a href="https://www.95598pay.com/index.jsp">电e宝</a></li>
+                    <li><a href="https://jr.esgcc.com.cn/">电商金融</a></li>
+                </ul>
+                
+                <ul class="top-r">
+                    <li><a href="#">商品服务</a><b></b><span>|</span></li>
+                    <li><a href="#">服务中心</a><b></b><span>|</span></li>
+                    <li><a href="#">网站导航</a><b></b></li>
+                </ul>
+                <ul class="top-c">
+                    <li><a href="logon.html">请登录</a><span>|</span></li>						
+                    <li><a href="zc.html">注册</a><span>|</span></li>						
+                    <li><a href="#">我的订单</a><span>|</span></li>																		
+                </ul>
+            </div>								
+        </div>
+        </div>
+        
+    <div id="layout">
+    <div class="margin">
+        <span class="s3">  热门搜索：<a href="#" class="a5">中性笔</a> <a href="#" class="a5">打印机</a> </span>
+        <div class="logo">
+            <a href="<a href="http://e.esgcc.com.cn">
+                    <img src="http://static.esgcc.com.cn/static/images/logo/logo_qg.jpg">
+                </a>
+            </div>
+            <div class="ipt">
+                <span class="s1"><a href="#">商品</a></span>
+                <input type="text" />
+                <span class="s2"><img src="img/fdj.png"><a href="#">搜索</a></span>                       
+            </div>
+            <div class="cart">
+                <img src="img/cart.png" />
+                <span>我的进货单</span>
+                <div class="zero">0</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="nav">
+        <div class="margin">
+            <div class="box"></div>
+            <dl>
+                <dt><img src = "img/four.png"/>全部分类</dt>
+                <dd class="d1">首页</dd>
+                <dd>寻缘大厅</dd>
+                <dd>招投标文区</dd>
+                <dd>电工装备</dd>
+                <dd>电商金融</dd>
+                <dd>跨境电商</dd>
+            </dl>
+        </div>
+    </div>
+   <div id="fdj">
+    	<div class="margin">
+	        <a href="index.html">首页 > </a><a href="page.html">  s11三相油浸式全密封电力变压器</a>
+	        <div class="s_box">
+	        	<img src="img/h1.png" alt="">
+		        <span></span>
+		        <p></p>
+		    </div>
+		    <div class="b_box">
+		        <img src="img/h1.png" alt="">
+		    </div>
+	    </div>
+    </div>
+</body>
+</html>
+<script src="libs/jquery.js"></script>
+<script>
+    $("dt").mouseover(function(){
+        $(this).parent().siblings().css({
+            display:"block"
+        })
+    })
+    $("dt").mouseout(function(){
+        $(this).parent().siblings().css({
+            display:"none"
+        })
+    })
+
+	var oSbox = document.querySelector(".s_box");
+    var ospan = oSbox.children[1];
+    var oSimg = oSbox.children[0];
+    var oBbox = document.querySelector(".b_box");
+    var oBimg = oBbox.children[0];
+
+    // 2-1.绑定鼠标进入事件
+    oSbox.onmouseover = function(){
+        // 3-1.显示元素
+        ospan.style.display = "block";
+        oBbox.style.display = "block";
+        oSimg.style.opacity = 0.4
+        // 4.鼠标移动事件
+        oSbox.onmousemove = function(eve){
+            // 5-1.拿到坐标
+            var e = eve || window.event;
+            var l = e.offsetX - ospan.offsetWidth/2;
+            var t = e.offsetY - ospan.offsetHeight/2;
+            // 5-1.边界限定
+            if(l<0) l=0;
+            if(t<0) t=0;
+            if(l>oSbox.offsetWidth-ospan.offsetWidth){
+                l=oSbox.offsetWidth-ospan.offsetWidth
+            }
+            if(t>oSbox.offsetHeight-ospan.offsetHeight){
+                t=oSbox.offsetHeight-ospan.offsetHeight
+            }
+
+            // 5-3.改变span的位置
+            ospan.style.left = l + "px";
+            ospan.style.top = t + "px";
+
+            // 6.计算移动的比例
+            var x = l/(oSbox.offsetWidth-ospan.offsetWidth);
+            var y = t/(oSbox.offsetHeight-ospan.offsetHeight);
+
+            // 7.根据比例改变大图的位置
+            oBimg.style.left = (oBbox.offsetWidth-oBimg.offsetWidth) * x + "px";
+            oBimg.style.top = (oBbox.offsetHeight-oBimg.offsetHeight) * y + "px";
+
+            // 8.修改span的背景图的位置
+            ospan.style.backgroundPosition = -l+"px "+ -t +"px";
+        }
+    }
+
+    // 2-2.绑定鼠标离开事件
+    oSbox.onmouseout = function(){
+        // 3-2.隐藏元素
+        ospan.style.display = "none";
+        oBbox.style.display = "none";
+        oSimg.style.opacity = 1
+    }
+
+</script>
+
+
+
+

@@ -1,0 +1,62 @@
+.margin{width:1200px;margin:0 auto;}
+
+#header{height: 91px;}
+#header .logo{margin-top: 18px; float: left;}
+#header .res{padding-left:5px; width:130px; height:24px; 
+line-height:20px; font-size:22px; color:#666; float:left; margin-left:10px; 
+margin-top:60px; border-left:2px solid #666; font-weight: 700;}
+
+#banner{background: url(../img/banner7.jpg) no-repeat center;width: 1440px;
+height:500px;margin-top: 20px;}
+#banner .login{height: 390px;width:340px; background:#fff; float: right; 
+margin-right:90px;margin-top: 50px;}
+#banner .login .l-t{height: 55px;line-height: 55px; background: #f2f2f2;}
+#banner .login .l-t h3{float: left; font-size: 20px;margin-left: 20px;color: #333333;}
+#banner .login .l-t a{float: right;font-size:14px;color:#fb6a00;margin-right: 22px;}
+#banner .login form{margin-top:30px; position: relative;}
+#banner .login form input{width: 290px;height: 40px;margin-left: 20px;border: 1px solid #dddddd;}
+#banner .login form input.ipt1{margin-bottom: 20px;
+background: url(../img/ren.png) no-repeat 5px 0;text-indent:40px;}
+#banner .login form input.ipt2{
+background: url(../img/ren.png) no-repeat 5px -125px;text-indent:40px;}
+#banner .login form a{display: block; color:#f40; margin-top: 24px; margin-left: 244px;}
+#banner .login form input.ipt3{height:35px;width:300px;text-align:center; background:#ff4400;
+border: none; font-size: 18px;color: #fff; line-height: 35px; margin-top: 24px; cursor: pointer;}
+#banner .login form .j_top{margin:14px 20px; font-size:13px; color:#999;}
+#banner .login form .j_top .line { border-bottom:dashed 1px #ccc; height:2px; width:120px; display:block; float:right; margin-top:7px; }
+#banner .login form a.a3{width:30px; height:30px;display:inline-block;
+background:url(../img/qq.png) no-repeat -155px 0; margin:0 auto; margin-left: 23px; margin-right:15px;}
+#banner .login form a.a4{width:30px; height:30px;display:inline-block;
+background:url(../img/qq.png) no-repeat -201px 0; margin:0 auto;}
+
+#banner .login form a.a3:hover{background:url(../img/qq.png) no-repeat -6px 0;}
+#banner .login form a.a4:hover{background:url(../img/qq.png) no-repeat -55px 0;}
+
+#banner .login form .error{width:300px;height:40px; position: 
+absolute;border:1px solid #E7E8EA; left:-292px;top:-25px; background:#fff; 
+line-height:40px; color: #ff4400;text-align: center;font-weight: 700;font-size: 14px;}
+
+#banner .login form .error1{width:300px;height:40px; position: 
+absolute;border:1px solid #E7E8EA; left:-292px;top:-25px; background:#fff; 
+line-height:40px; color: #ff4400;text-align: center;font-weight: 700;font-size: 14px;}
+#banner .login form .msg{margin-left: 120px;font-size: 14px;margin-top:5px; color: red; display: block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{height: 149px;}
+#footer .pp{text-align: center;margin-top: 10px;}
+#footer .pp p{color: #666; font:12px/25px "";}
+#footer .gg{text-align: center; margin-top: 8px;} 
+
+

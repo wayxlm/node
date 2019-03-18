@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>	
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/cart.css"  />
+		<style type="text/css">
+			table{background:pink;}
+			.hh a{text-decoration:none;}
+			.hh{color:#eee;margin-left: 50px;margin-top: 50px;}			
+			img.aaa{width:100px;}
+			em{display: block;width:120px;line-height: 30px;color: #fff;background: dodgerblue;margin: 10px auto;text-align: center;border-radius: 6px;}
+			td{text-align: center; color:blueviolet;}
+			
+		</style>
+	</head>
+<body>
+<div id="header">
+	<div class="margin">
+		<div class="top">
+			<ul class="top-l">
+				<li><a href="http://www.esgcc.com.cn/">国网商城</a></li>
+				<li><a href="http://emall.esgcc.com.cn/portal/" >企业商城</a></li>
+				<li><a href="https://www.95598pay.com/index.jsp">电e宝</a></li>
+				<li><a href="https://jr.esgcc.com.cn/">电商金融</a></li>
+			</ul>
+			
+			<ul class="top-r">
+				<li><a href="#">商品服务</a><b></b><span>|</span></li>
+				<li><a href="#">服务中心</a><b></b><span>|</span></li>
+				<li><a href="#">网站导航</a><b></b></li>
+			</ul>
+			<ul class="top-c">
+				<li><a href="logon.html">请登录</a><span>|</span></li>						
+				<li><a href="zc.html">注册</a><span>|</span></li>						
+				<li><a href="cart.html">我的订单</a><span>|</span></li>																		
+			</ul>
+		</div>								
+	</div>
+</div>
+
+<div id="layout">
+	<div class="margin">
+		<div class="logo">
+			<a href="index.html">
+        		<img src="http://static.esgcc.com.cn/static/images/logo/logo_qg.jpg">
+    		</a>
+		</div>
+		<div class="ipt">
+			<span class="s1"><a href="#">商品</a></span>
+			<input type="text" />
+			<span class="s2"><img src="img/fdj.png"><a href="#">搜索</a></span>
+		</div>
+		<div class="cart">
+			<img src="img/cart.png" />
+			<span>我的进货单</span>
+			<div class="zero">0</div>
+		</div>
+	</div>
+</div>
+
+
+<h2 class="hh">购物车<small>&nbsp;&nbsp;<a href="goods.html">去商品列表</a></small></h2>
+<table border="1" cellspacing="0" width="700" align="center" style="margin: 50px auto;">
+			<thead>
+				<tr>
+					<th>图片</th>
+					<th>名字</th>
+					<th>价格</th>
+					
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><img src=""/ class="aaa"></td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td><em>删除</em></td>
+				</tr>
+			</tbody>
+	</table>
+	
+<div id="bank">
+	<div class="margin">
+		<div class="line">
+			<b></b>
+			<span>电商金融</span>
+			<b></b>
+		</div>
+		<div class="bank-t">
+			<ul>
+				<li>
+					<a target="_blank" href="https://scf.esgcc.com.cn/">
+						<img src="http://static.esgcc.com.cn/static/images/ent-plam3/fina1.jpg">
+					</a>
+					<a target="_blank" href="https://scf.esgcc.com.cn/" class="a-hover">
+						<img src="http://static.esgcc.com.cn/static/images/ent-plam3/fina1-hover.jpg">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://pj.esgcc.com.cn/">
+						<img src="http://static.esgcc.com.cn/static/images/ent-plam3/fina2.jpg">
+					</a>
+					<a target="_blank" href="https://pj.esgcc.com.cn/" class="a-hover">
+						<img src="http://static.esgcc.com.cn/static/images/ent-plam3/fina2-hover.jpg">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://jr.esgcc.com.cn/dianyidai/">
+						<img src="http://static.esgcc.com.cn/static/images/ent-plam3/fina3.jpg">
+					</a>
+					<a target="_blank" href="https://jr.esgcc.com.cn/dianyidai/" class="a-hover">
+						<img src="http://static.esgcc.com.cn/static/images/ent-plam3/fina3-hover.jpg">
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://jr.esgcc.com.cn/guangfu/"> 
+						<img src="http://static.esgcc.com.cn/static/images/ent-plam3/fina4.jpg">
+					</a>
+					<a target="_blank" href="https://jr.esgcc.com.cn/guangfu/" class="a-hover">
+						<img src="http://static.esgcc.com.cn/static/images/ent-plam3/fina4-hover.jpg">
+					</a>
+				</li>
+			</ul>			
+		</div>
+	</div>
+</div>	
+</body>
+<script src="js/data.js"></script>
+<script src="js/cookie.js"></script>
+<script type="text/javascript">
+	var otbody = document.querySelector("tbody");
+    var arr = document.cookie.split("; ");
+
+    var str = "";
+    for(var i=0;i<arr.length;i++){
+        for(var j=0;j<json.length;j++){
+            if(arr[i].split("=")[1] == json[j].goodsId){
+                str += "<tr data-id='"+ json[j].goodsId +"'>"+
+                            "<td><img src='"+ json[j].src +"'></td>"+
+                            "<td>"+ json[j].name +"</td>"+
+                            "<td>"+ json[j].price +"</td>"+
+                            "<td><span>删除</span></td>"+
+                        "</tr>";
+            }
+        }
+    }
+    otbody.innerHTML = str;
+
+    // 删除按钮的功能：事件委托
+    otbody.addEventListener("click",function(eve){
+        var e = eve || window.event;
+        var target = e.target || e.srcElement;
+        if(target.tagName == "SPAN"){
+            // 删除DOM元素
+            target.parentNode.parentNode.remove()
+            // 删除cookie数据
+            var id = target.parentNode.parentNode.getAttribute("data-id");
+            removeCookie(id);
+        }
+    })
+</script>
+</html>

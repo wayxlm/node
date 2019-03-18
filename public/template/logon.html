@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" href="css/logon.css" />
+		<link rel="stylesheet" href="css/public.css" />
+	</head>
+	<style>
+		html{overflow-x: hidden;overflow-y: auto;}
+	</style>
+	<body>
+		<div id="header">
+			<div class="margin">
+				<div class="logo">
+					<a href="<a href="index.html">
+			        <img src="http://static.esgcc.com.cn/static/images/logo/logo_qg.jpg">
+			    	</a>
+				</div>	
+				<div class="res">欢迎登录</div>
+			</div>			
+		</div>
+		
+		<div id="banner">
+			<div class="margin">
+				<div class="login">
+					<div class="l-t">
+						<h3>会员登录</h3>
+						<a href="zc.html">注册></a>
+					</div>
+					<form>
+						<input type="text" class="ipt1"  placeholder="手机/邮箱/会员" />
+						<input type="password" class="ipt2" placeholder="请输入密码" />
+						<div class="error" style="display: none;">
+							<img src="img/tan.png"/>
+							请输入用户名！
+						</div>
+						<div class="error1" style="display: none;">
+							<img src="img/tan.png"/>
+							用户名或密码错误！
+						</div>
+						<a href="#">忘记密码</a>
+						<input type="button" value="登录" class="ipt3"/>
+						<span class="msg"></span>
+						<div class="j_top">使用合作网站账号登录商城<i class="line"></i></div>
+						<a href="#" class="a3"></a>
+						<a href="#" class="a4"></a>
+					</form>
+				</div>
+			</div>			
+		</div>
+		
+		<div id="footer">
+			<div class="pp">
+				<p> 
+					国网商城网站备案号：京ICP备09055871号-3&nbsp;&nbsp;国网商城ICP证号：京ICP证150144号 
+            	</p>
+				<p>
+					商城公网安备号：京公网安备110102001007-3 
+				</p>				
+			</div>
+			<div class="gg">
+				<img src="http://static.esgcc.com.cn/static/images/logo/ca_logo_qg.jpg">
+			</div>						
+		</div>		
+	</body>
+	<script src="libs/jquery.js"></script>
+	<script type="text/javascript">
+		$("#banner").find("form").children(".ipt1").focus(function(){
+			
+			$(this).css({
+				background:"url(img/ren.png) no-repeat 5px -258px",
+				border:"1px solid #0080eb"
+			}).siblings(".ipt2").css({
+				background:"url(img/ren.png) no-repeat 5px -125px",
+				border:""
+			})
+		})
+		
+		$("#banner").find("form").children(".ipt2").focus(function(){
+			
+			$(this).css({
+				background:"url(img/ren.png) no-repeat 5px -303px",
+				border:"1px solid #0080eb"
+			}).siblings(".ipt1").css({
+				background:"url(img/ren.png) no-repeat 5px 0",
+				border:""
+			})
+		})
+		var e1 = document.querySelector(".error");
+		var e2 = document.querySelector(".error1");
+		var oipt1 = document.querySelector(".ipt1");
+		var oipt2 = document.querySelector(".ipt2");
+		var oipt3 = document.querySelector(".ipt3");
+		var uonOff = ponOff = p2onOff = eonOff = false;
+		oipt1.onblur = function(){
+			var reg = /\S/;
+			 if(reg.test(this.value)){
+            this.nextElementSibling.innerHTML = "符合规则";
+            uonOff = true;
+       }else{          
+       		e1.style.display = "block"
+               setInterval(()=>{
+               e1.style.display = "none"
+               },3000)
+        }
+	}
+		
+		class Login{
+        constructor(){
+            this.url = "http://www.liyangyf.com/ctrl/login.php";
+            this.init()
+        }
+        init(){
+            var that = this;
+            $(".ipt3").click(function(){
+                that.load()
+            })
+        }
+        load(){
+            var that = this;
+            $.ajax({
+				url:'/api/login',
+				type:'post',
+                data:{
+                    username:$(".ipt1").val(),
+                    password:$(".ipt2").val()
+                },
+                success:function(res){
+                    switch(res.error){                       
+                        case 1:
+                            $(".msg").html("账户密码错误");
+                            break;
+                        default:
+                            that.res = res.data;
+                            $(".msg").html("登录成功,三秒后跳转购物车");
+                             setTimeout(() => {
+                                location.href = "cart.html";
+                            }, 3000);
+                            that.display()
+                    }
+                }
+             
+            })
+        }
+        display(){
+            console.log(this.res)
+        }
+    }
+
+
+    new Login()
+		
+		
+		
+		
+	</script>
+</html>
